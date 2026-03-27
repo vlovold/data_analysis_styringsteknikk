@@ -1,4 +1,5 @@
 import pandas
+from sklearn.preprocessing import *
 
 #Collect CSV file and store it in data structure
 def read_file(filepath):
@@ -7,8 +8,14 @@ def read_file(filepath):
     return df
 
 #Preprocessing
-#Find nan values and deal with them
+#Normalize values, minmax, z-score, robust scaling
+def standard_scaling(dataframe, column):
+    scaler = StandardScaler()
+    scaled_data = scaler.fit_transform(dataframe[[column]])
+    return scaled_data
+
+#def normalize
 
 #Processing
-#Normalize values, minmax, z-score, robust scaling
+
 
