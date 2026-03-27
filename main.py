@@ -1,16 +1,10 @@
 import scipy
 import matplotlib as mpl
 import numpy
+import sklearn
+from src.preprocessing import greeting
 
-#Collect CSV file and store it in data structure
+greeting()
 
-#Preprocessing
-#Find nan values and deal with them
 
-#Processing
-#Normalize values, minmax, z-score, robust scaling
-
-#Analysis
-#Pearson correlation, Linear disciminant analysis (PCA, LDA),
-#Multi layer perceptron
 
