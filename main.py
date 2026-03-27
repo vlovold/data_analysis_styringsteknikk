@@ -1,10 +1,13 @@
 import scipy
-import matplotlib as mpl
+import matplotlib.pyplot as mpl
 import numpy
 import sklearn
-from src.preprocessing import greeting
+from src.preprocessing import read_file
+from src.visualization import print_histogram
 
-greeting()
+df = read_file('equipment_anomaly_data.csv')
+ax = print_histogram(df)
+print(df.head())
 
-
+mpl.show()
 
