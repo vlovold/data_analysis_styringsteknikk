@@ -4,6 +4,8 @@ import numpy
 import sklearn
 from src.preprocessing import read_file, standard_scaling
 from src.visualization import print_histogram
+from src.models import pearson_corr
+
 #Initializes data
 df = read_file('equipment_anomaly_data.csv')
 
@@ -19,4 +21,6 @@ scaled_hum = standard_scaling(df, 'humidity')
 scaled_vib = standard_scaling(df, 'vibration')
 scaled_pres = standard_scaling(df, 'pressure')
 
-print("whaaa")
+#Analysis
+
+print(pearson_corr(df, 'pressure', 'faulty'))
