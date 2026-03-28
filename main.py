@@ -19,3 +19,4 @@ scaled_hum = standard_scaling(df, 'humidity')
 scaled_vib = standard_scaling(df, 'vibration')
 scaled_pres = standard_scaling(df, 'pressure')
 
+print("whaaa")
