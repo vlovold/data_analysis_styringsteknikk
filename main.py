@@ -29,9 +29,9 @@ df_normalized['pressure'] = scaled_pres
 
 #Analysis
 
-#print(pearson_corr(df, 'pressure', 'faulty'))
+print(pearson_corr(df, 'pressure', 'faulty'))
 
 #Plot correlation heatmap
-#plot_correlation_heatmap(df_normalized)
+plot_correlation_heatmap(df_normalized)
 
-print(linear_discriminant(df_normalized))
+linear_discriminant(df_normalized)

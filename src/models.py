@@ -31,8 +31,13 @@ def linear_discriminant(dataframe):
     y_pred = clf.predict(x_test)
     class_report = classification_report(y_test, y_pred)
     confusing_matrix=confusion_matrix(y_test, y_pred)
-    print("_____________Accuracy______________")
+    print("_____________Accuracy________________")
     print(accuracy_score(y_test, y_pred))
-
+    print("____________Confusion matrix__________")
     print(confusing_matrix)
-    return class_report
+    print("____________Class Report______________")
+    print(class_report)
+
+    return
+
+def multi_layer_perceptron(dataframe):
