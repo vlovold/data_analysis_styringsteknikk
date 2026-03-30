@@ -13,10 +13,8 @@ def print_histogram(dataframe):
 
 #Created a plot correlation heat map, uses original numbers, not scaled
 def plot_correlation_heatmap(dataframe):
-    df_num = dataframe.select_dtypes(include='number') #Uses only numerical values from dataset
-    matrix = df_num.corr()
-
-    plt.figure(figsize=(8,6))
+    matrix = dataframe.corr(numeric_only=True)
+    plt.figure(figsize=(8, 6))
     sns.heatmap(matrix, annot=True, cmap = "coolwarm", fmt=".2f", linewidths=.5)
     plt.title("Viktor & Elisabeths cool Correlation Matrix")
     plt.show()
