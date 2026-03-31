@@ -4,7 +4,7 @@ import numpy
 import sklearn
 from src.preprocessing import read_file, standard_scaling
 from src.visualization import print_histogram, plot_correlation_heatmap
-from src.models import pearson_corr, linear_discriminant
+from src.models import pearson_corr, linear_discriminant, multi_layer_perceptron
 
 #Initializes data
 df = read_file('equipment_anomaly_data.csv')
@@ -34,4 +34,8 @@ print(pearson_corr(df, 'pressure', 'faulty'))
 #Plot correlation heatmap
 plot_correlation_heatmap(df_normalized)
 
+#Run linear discriminant prediction and testing
 linear_discriminant(df_normalized)
+
+#Run Multi-layer perceptron prediction and testing
+multi_layer_perceptron(df_normalized)
