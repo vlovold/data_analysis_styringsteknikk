@@ -1,7 +1,3 @@
-import scipy
-import matplotlib.pyplot as mpl
-import numpy
-import sklearn
 from src.preprocessing import read_file, standard_scaling
 from src.visualization import print_histogram, plot_correlation_heatmap
 from src.models import pearson_corr, linear_discriminant, multi_layer_perceptron
@@ -26,10 +22,6 @@ df_normalized['temperature'] = scaled_temp
 df_normalized['humidity'] = scaled_hum
 df_normalized['vibration'] = scaled_vib
 df_normalized['pressure'] = scaled_pres
-
-#Analysis
-
-print(pearson_corr(df, 'pressure', 'faulty'))
 
 #Plot correlation heatmap
 plot_correlation_heatmap(df_normalized)
